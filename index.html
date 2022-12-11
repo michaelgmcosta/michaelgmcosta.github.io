@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="icon" href="./img/favicon.png?v=2" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Hello</title>
+	</head>
+
+	<body class="dark">
+		<script>
+			function rain() {
+				let amount = 50;
+				let body = document.querySelector("body");
+				let i = 0;
+				while (i < amount) {
+					let drop = document.createElement("i");
+
+					let size = Math.random() * 5;
+					let posX = Math.floor(Math.random() * window.innerWidth);
+					let delay = Math.random() * -20;
+					let duration = Math.random() * 5;
+
+					drop.style.width = 0.2 + size + "px";
+					drop.style.left = posX + "px";
+					drop.style.animationDelay = delay + "s";
+					drop.style.animationDuration = 1 + duration + "s";
+
+					body.appendChild(drop);
+					i++;
+				}
+			}
+			rain();
+		</script>
+		<div class="container">
+			<img class="profile" src="https://github.com/michaelgmcosta.png" alt="Imagem do perfil" />
+			<h1>Michael Costa</h1>
+			<p class="info">Software Developer</p>
+			<ul>
+				<li>
+					<a href="https://www.linkedin.com/in/michaelgm-costa/" target="_blank"
+						><img class="ul-img" src="./img/linkedin.png" />Linkedin</a
+					>
+				</li>
+				<li>
+					<a href="https://github.com/michaelgmcosta" target="_blank"
+						><img class="ul-img" src="./img/github.png" />GitHub</a
+					>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
