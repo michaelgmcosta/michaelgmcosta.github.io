@@ -6,20 +6,26 @@
 a {
 	text-decoration: none;
 }
-html {
-	--bg-color: #e8f0ff;
-	--text-color: #272635;
-}
 body.dark {
-	--bg-color: #000;
+	--bg-color: #171717;
+	--text-color: #e8f0ff;
+	--theme-color: #6d28d9;
+	--hover-color: #40376e;
 	overflow: hidden;
 	height: 100vh;
+}
+body.zinc {
+	--bg-color: #171717;
 	--text-color: #e8f0ff;
+	--theme-color: #d4d4d8;
+	--hover-color: #71717a;
+	overflow: hidden;
+	height: 100vh;
 }
 i {
 	position: fixed;
 	height: 200px;
-	background: linear-gradient(transparent, #6d28d9);
+	background: linear-gradient(transparent, var(--theme-color));
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 	animation: animate 5s linear infinite;
@@ -49,7 +55,7 @@ body {
 .profile {
 	width: 100%;
 	border-radius: 50%;
-	border: #6d28d9 solid 4px;
+	border: var(--theme-color) solid 4px;
 	padding: 4px;
 	width: 100px;
 	height: 100px;
@@ -77,7 +83,7 @@ ul li a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: #6d28d9;
+	background: var(--theme-color);
 	color: var(--bg-color);
 	text-transform: uppercase;
 	font-size: 14px;
@@ -86,7 +92,7 @@ ul li a {
 	transition: background 400ms;
 }
 ul li a:hover {
-	background: #40376e;
+	background: var(--hover-color);
 }
 footer {
 	font-weight: 500;
